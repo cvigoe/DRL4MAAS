@@ -1,0 +1,43 @@
+{
+  "actor_width": 64,
+  "algorithm": "PPO",
+  "algorithm_kwargs": {
+    "batch_size": 256,
+    "clear_buffer_every_train_loop": true,
+    "max_path_length": 1000,
+    "min_num_steps_before_training": 0,
+    "num_epochs": 3000,
+    "num_eval_steps_per_epoch": 1000,
+    "num_expl_steps_per_train_loop": 2048,
+    "num_train_loops_per_epoch": 10,
+    "num_trains_per_train_loop": 100
+  },
+  "critic_width": 256,
+  "gpu": false,
+  "mlflow_uri": "http://128.2.210.74:8080",
+  "policy_kwargs": {
+    "std": null
+  },
+  "replay_buffer_size": 3000,
+  "rnd_kwargs": {
+    "rnd_latent_size": 64,
+    "rnd_lr": 0.0003,
+    "rnd_output_size": 512
+  },
+  "target_kwargs": {
+    "target_lookahead": 15,
+    "tdlambda": 0.95,
+    "use_dones_for_rnd_critic": false
+  },
+  "trainer_kwargs": {
+    "discount": 0.99,
+    "epsilon": 0.25,
+    "intrinsic_discount": 0.9999,
+    "policy_lr": 0.0003,
+    "predictor_update_proportion": 0.25,
+    "rnd_coef": 10,
+    "use_rnd": false,
+    "val_lr": 0.0003
+  },
+  "version": "normal"
+}
